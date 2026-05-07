@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Start</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+
+      /* Background 1920x1080 */
+      background:url('background.jpg') center center/cover no-repeat;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+
+    /* Tombol Game */
+    .start-btn{
+      position:relative;
+      z-index:2;
+
+      width:200px;
+      height:200px;
+      border-radius:25%;
+      border:none;
+      cursor:pointer;
+
+      color:white;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+
+      /* Warna hijau glossy */
+      background:
+        radial-gradient(circle at top,
+          #8dff8d 0%,
+          #38d938 30%,
+          #0f9f0f 65%,
+          #066906 100%);
+
+      box-shadow:
+        0 0 20px rgba(0,255,0,0.5),
+        0 0 50px rgba(0,255,0,0.35),
+        inset 0 8px 15px rgba(255,255,255,0.55),
+        inset 0 -10px 20px rgba(0,0,0,0.35);
+
+      transition:0.25s ease;
+    }
+
+    /* Efek kilap atas */
+    .start-btn::before{
+      content:"";
+      position:absolute;
+
+      top:18px;
+      left:30px;
+
+      width:120px;
+      height:55px;
+
+      border-radius:50%;
+
+      background:rgba(255,255,255,0.45);
+
+      filter:blur(2px);
+      transform:rotate(-8deg);
+    }
+
+    .start-btn:hover{
+      transform:scale(1.08);
+
+      box-shadow:
+        0 0 35px rgba(0,255,0,0.75),
+        0 0 80px rgba(0,255,0,0.45),
+        inset 0 8px 15px rgba(255,255,255,0.6),
+        inset 0 -10px 20px rgba(0,0,0,0.35);
+    }
+
+    .start-btn:active{
+      transform:scale(0.95);
+    }
+
+    /* Icon play */
+    .play-icon{
+      width:0;
+      height:0;
+
+      border-top:24px solid transparent;
+      border-bottom:24px solid transparent;
+      border-left:40px solid white;
+
+      margin-left:8px;
+
+      filter:drop-shadow(0 0 8px rgba(255,255,255,0.8));
+    }
+
+    .start-text{
+      font-size:30px;
+      font-weight:bold;
+      text-shadow:0 0 10px rgba(255,255,255,0.8);
+      letter-spacing:1px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <button class="start-btn"
+    onclick="window.location.href='sub/main.html'">
+
+    <div class="play-icon"></div>
+    <div class="start-text">Mulai</div>
+
+  </button>
+
+</body>
+</html>
