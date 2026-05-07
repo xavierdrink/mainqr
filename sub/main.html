@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Main Menu</title>
 
   <style>
@@ -40,10 +40,16 @@
       flex-wrap:wrap;
     }
 
+    /* Link pembungkus */
+    .menu-link{
+      display:block;
+    }
+
     /* Tombol gambar */
     .menu-btn{
       width:220px;
       cursor:pointer;
+      display:block;
 
       transition:0.25s ease;
 
@@ -175,38 +181,49 @@
   <div class="menu-container">
 
     <!-- Story 1 -->
-    <img
-      src="3.png"
-      class="menu-btn"
-      onclick="window.location.href='https://xavierdrink.github.io/1/'"
-      alt="Story 1"
+    <a
+      href="https://xavierdrink.github.io/1/"
+      class="menu-link"
     >
+      <img
+        src="3.png"
+        class="menu-btn"
+        alt="Story 1"
+      />
+    </a>
 
     <!-- Story 2 -->
-    <img
-      src="4.png"
-      class="menu-btn"
-      onclick="window.location.href='story2/index.html'"
-      alt="Story 2"
+    <a
+      href="story2/index.html"
+      class="menu-link"
     >
+      <img
+        src="4.png"
+        class="menu-btn"
+        alt="Story 2"
+      />
+    </a>
 
     <!-- Story 3 -->
-    <img
-      src="5.png"
-      class="menu-btn"
-      onclick="window.location.href='story3/index.html'"
-      alt="Story 3"
+    <a
+      href="story3/index.html"
+      class="menu-link"
     >
+      <img
+        src="5.png"
+        class="menu-btn"
+        alt="Story 3"
+      />
+    </a>
 
   </div>
 
   <!-- Tombol Back -->
   <button
     class="back-btn"
-    onclick="window.location.href='../index.html'">
-
+    onclick="window.location.href='../index.html';"
+  >
     ⬅ Kembali
-
   </button>
 
 </body>
