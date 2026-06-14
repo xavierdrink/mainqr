@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Pembelajaran Unsur Intrinsik Teks Narasi</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family:'Comic Sans MS', Arial, sans-serif;
+    overflow-x:hidden;
+    position:relative;
+
+    background:linear-gradient(
+        to bottom,
+        #7dd3fc 0%,
+        #bae6fd 55%,
+        #86efac 56%,
+        #4ade80 100%
+    );
+}
+
+/* Matahari */
+.sun{
+    position:absolute;
+    top:40px;
+    right:60px;
+    width:120px;
+    height:120px;
+    background:#FFD93D;
+    border-radius:50%;
+    box-shadow:0 0 50px #FFD93D;
+}
+
+/* Awan */
+.cloud{
+    position:absolute;
+    background:white;
+    border-radius:50px;
+}
+
+.cloud:before,
+.cloud:after{
+    content:"";
+    position:absolute;
+    background:white;
+    border-radius:50%;
+}
+
+.cloud1{
+    width:140px;
+    height:50px;
+    top:80px;
+    left:80px;
+}
+
+.cloud1:before{
+    width:60px;
+    height:60px;
+    left:15px;
+    top:-25px;
+}
+
+.cloud1:after{
+    width:80px;
+    height:80px;
+    right:15px;
+    top:-35px;
+}
+
+.cloud2{
+    width:170px;
+    height:60px;
+    top:140px;
+    right:250px;
+}
+
+.cloud2:before{
+    width:70px;
+    height:70px;
+    left:25px;
+    top:-30px;
+}
+
+.cloud2:after{
+    width:90px;
+    height:90px;
+    right:20px;
+    top:-40px;
+}
+
+/* Container */
+.container{
+    position:relative;
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+/* Judul */
+.title-card{
+    background:rgba(255,255,255,.95);
+
+    padding:25px 35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    max-width:1000px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+
+    margin-bottom:40px;
+}
+
+.title-card h1{
+    color:#1e40af;
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.title-card p{
+    color:#ea580c;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Menu */
+.menu-container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.menu-card{
+    width:310px;
+    min-height:280px;
+
+    border:none;
+    border-radius:30px;
+
+    padding:25px;
+
+    color:white;
+
+    cursor:pointer;
+
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+.icon{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+.menu-card h2{
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.menu-card p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+/* Warna Menu */
+.materi{
+    background:linear-gradient(
+        to bottom,
+        #60A5FA,
+        #2563EB
+    );
+}
+
+.cerita{
+    background:linear-gradient(
+        to bottom,
+        #4ADE80,
+        #16A34A
+    );
+}
+
+.petunjuk{
+    background:linear-gradient(
+        to bottom,
+        #FBBF24,
+        #EA580C
+    );
+}
+
+/* Tombol Kembali */
+.back-btn{
+    margin-top:35px;
+
+    padding:15px 45px;
+
+    border:none;
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:22px;
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(
+        to bottom,
+        #ef5350,
+        #c62828
+    );
+
+    box-shadow:
+        0 6px 0 #8e0000,
+        0 10px 20px rgba(0,0,0,.25);
+
+    transition:.2s;
+}
+
+.back-btn:hover{
+    transform:scale(1.05);
+}
+
+.back-btn:active{
+    transform:translateY(3px);
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .title-card h1{
+        font-size:26px;
+    }
+
+    .title-card p{
+        font-size:17px;
+    }
+
+    .menu-card{
+        width:100%;
+        max-width:350px;
+        min-height:220px;
+    }
+
+    .menu-card h2{
+        font-size:24px;
+    }
+
+    .menu-card p{
+        font-size:16px;
+    }
+
+    .icon{
+        font-size:55px;
+    }
+
+    .sun{
+        width:80px;
+        height:80px;
+    }
+
+    .back-btn{
+        font-size:18px;
+        padding:12px 30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+
+<div class="container">
+
+    <div class="title-card">
+        <h1>📚 Media Pembelajaran Unsur Intrinsik Teks Narasi</h1>
+        <p>✨ Belajar Lebih Seru dengan Cerita ✨</p>
+    </div>
+
+    <div class="menu-container">
+
+        <button class="menu-card materi"
+            onclick="window.location.href='materi.html'">
+
+            <div class="icon">📖</div>
+
+            <h2>Materi</h2>
+
+            <p>
+                Pelajari unsur intrinsik teks narasi di sini!
+            </p>
+
+        </button>
+
+        <button class="menu-card cerita"
+            onclick="window.location.href='main.html'">
+
+            <div class="icon">📚</div>
+
+            <h2>Pilih Cerita</h2>
+
+            <p>
+                Pilih salah satu cerita menarik untuk dibaca.
+            </p>
+
+        </button>
+
+        <button class="menu-card petunjuk"
+            onclick="window.location.href='petunjuk.html'">
+
+            <div class="icon">💡</div>
+
+            <h2>Petunjuk Penggunaan</h2>
+
+            <p>
+                Pelajari cara menggunakan media pembelajaran ini.
+            </p>
+
+        </button>
+
+    </div>
+
+    <button
+        class="back-btn"
+        onclick="window.location.href='../index.html';">
+        ⬅ Kembali
+    </button>
+
+</div>
+
+</body>
+</html>
