@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petunjuk Penggunaan QR Story</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+
+    padding:20px;
+}
+
+/* Judul */
+.title{
+    margin-bottom:20px;
+    font-size:32px;
+    font-weight:bold;
+    color:#2c3e50;
+    text-align:center;
+}
+
+/* Gambar petunjuk */
+.petunjuk-img{
+    max-width:95%;
+    max-height:75vh;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+}
+
+/* Tombol kembali */
+.back-btn{
+    margin-top:25px;
+
+    padding:15px 40px;
+
+    border:none;
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:22px;
+    font-weight:bold;
+    color:white;
+
+    background:
+      linear-gradient(
+        to bottom,
+        #4CAF50,
+        #2E7D32
+      );
+
+    box-shadow:
+      0 6px 0 #1B5E20,
+      0 0 15px rgba(76,175,80,.5);
+
+    transition:.2s;
+}
+
+.back-btn:hover{
+    transform:scale(1.05);
+}
+
+.back-btn:active{
+    transform:translateY(3px);
+}
+
+@media(max-width:768px){
+
+    .title{
+        font-size:24px;
+    }
+
+    .petunjuk-img{
+        max-width:100%;
+        max-height:70vh;
+    }
+
+    .back-btn{
+        font-size:18px;
+        padding:12px 30px;
+    }
+}
+</style>
+</head>
+<body>
+
+<h1 class="title">📖 Petunjuk Penggunaan QR Story</h1>
+
+<img
+    src="petunjuk.jpeg"
+    alt="Petunjuk QR Story"
+    class="petunjuk-img"
+>
+
+<button
+    class="back-btn"
+    onclick="window.location.href='main.html';"
+>
+    ⬅ Kembali
+</button>
+
+</body>
+</html>
